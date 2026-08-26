@@ -21,6 +21,7 @@
 @theme inline {
   --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
   --color-accent-glow: var(--accent-glow);
   --color-surface: var(--surface);
   --radius-sm: calc(var(--radius) - 4px);
