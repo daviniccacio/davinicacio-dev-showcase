@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 /** Adds `is-revealed` to every [data-reveal] element as it scrolls into view. */
 export function useReveal() {
@@ -24,13 +24,29 @@ export function useReveal() {
   }, []);
 }
 
-/** Rotating typewriter text. */
-export function useTypewriter(words: string[], speed = 90, pause = 1600) {
-  const [state, setState] = useReactState(words);
-  return state;
+/** Rotating typewriter effect over a list of words. */
+export function useTypewriter(words: string[], typeMs = 85, holdMs = 1500) {
+  const [index, setIndex] = useState(0);
+  const [len, setLen] = useState(0);
+  const [deleting, setDeleting] = useState(false);
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  function useReactState(_w: string[]): [string, unknown] {
-    throw new Error("unused");
-  }
+  useEffect(() => {
+    const word = words[index % words.length] ?? "";
+    if (!deleting && len === word.length) {
+      const t = setTimeout(() => setDeleting(true), holdMs);
+      return () => clearTimeout(t);
+    }
+    if (deleting && len === 0) {
+      setDeleting(false);
+      setIndex((i) => (i + 1) % words.length);
+      return;
+    }
+    const t = setTimeout(
+      () => setLen((l) => l + (deleting ? -1 : 1)),
+      deleting ? typeMs / 2 : typeMs,
+    );
+    return () => clearTimeout(t);
+  }, [len, deleting, index, words, typeMs, holdMs]);
+
+  return (words[index % words.length] ?? "").slice(0, len);
 }
