@@ -47,7 +47,7 @@ export function Projects() {
                 loading="lazy"
                 width={1280}
                 height={800}
-                className="aspect-[16/10] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="aspect-16/10 w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>
             <div className="flex flex-1 flex-col p-6">
@@ -83,7 +83,7 @@ export function Projects() {
 
         <article
           data-reveal
-          className="reveal flex min-h-[320px] flex-col items-center justify-center gap-4 rounded-3xl border border-dashed border-border p-8 text-center transition-colors hover:border-accent/40"
+          className="reveal flex min-h-80 flex-col items-center justify-center gap-4 rounded-3xl border border-dashed border-border p-8 text-center transition-colors hover:border-accent/40"
           style={{ transitionDelay: "160ms" }}
         >
           <span className="rounded-full border border-border p-3 text-accent">

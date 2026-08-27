@@ -49,7 +49,7 @@ export function Timeline() {
             style={{ transitionDelay: `${i * 90}ms` }}
           >
             <span
-              className={`absolute top-1.5 -left-[5px] size-2.5 rounded-full ${
+              className={`absolute top-1.5 -left-1.25 size-2.5 rounded-full ${
                 job.current ? "bg-accent shadow-[0_0_18px_var(--accent-glow)]" : "bg-border"
               }`}
             />

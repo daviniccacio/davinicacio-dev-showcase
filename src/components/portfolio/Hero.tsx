@@ -12,7 +12,7 @@ export function Hero() {
 
   return (
     <section id="top" className="grain mesh-hero relative overflow-hidden">
-      <div className="mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-5 pt-28 pb-20 sm:px-8">
+      <div className="mx-auto flex min-h-svh max-w-6xl flex-col justify-center px-5 pt-28 pb-20 sm:px-8">
         <p
           data-reveal
           className="reveal mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-border bg-surface/60 px-3 py-1 text-xs text-muted-foreground"
@@ -34,7 +34,7 @@ export function Hero() {
           <p className="font-display text-xl font-medium sm:text-2xl">Front-End Developer</p>
           <p className="font-mono text-base text-accent sm:text-lg">
             {typed}
-            <span className="ml-0.5 inline-block h-[1.1em] w-[2px] translate-y-[2px] bg-accent align-middle animate-terminal-blink" />
+            <span className="ml-0.5 inline-block h-[1.1em] w-0.5 translate-y-0.5 bg-accent align-middle animate-terminal-blink" />
           </p>
         </div>
 
