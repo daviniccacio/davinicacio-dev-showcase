@@ -34,7 +34,7 @@ export function Hero() {
           <p className="font-display text-xl font-medium sm:text-2xl">Front-End Developer</p>
           <p className="font-mono text-base text-accent sm:text-lg">
             {typed}
-            <span className="ml-0.5 inline-block h-[1.1em] w-[2px] translate-y-[2px] animate-pulse bg-accent align-middle" />
+            <span className="ml-0.5 inline-block h-[1.1em] w-[2px] translate-y-[2px] bg-accent align-middle animate-terminal-blink" />
           </p>
         </div>
 
