@@ -9,7 +9,10 @@ const actions = [
 
 export function Contact() {
   return (
-    <section id="contato" className="grain mesh-hero relative overflow-hidden border-t border-border">
+    <section
+      id="contato"
+      className="grain mesh-hero relative overflow-hidden border-t border-border"
+    >
       <div className="mx-auto max-w-6xl px-5 py-28 sm:px-8 sm:py-36">
         <div data-reveal className="reveal">
           <p className="mb-5 font-mono text-xs tracking-[0.2em] text-accent uppercase">Contato</p>
@@ -46,7 +49,10 @@ export function Contact() {
 
       <footer className="border-t border-border">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-8 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:px-8">
-          <p>© {new Date().getFullYear()} Davi Nicacio de Oliveira Cunha. Todos os direitos reservados.</p>
+          <p>
+            © {new Date().getFullYear()} Davi Nicacio de Oliveira Cunha. Todos os direitos
+            reservados.
+          </p>
           <p className="font-mono">São Luís · MA · Brasil</p>
         </div>
       </footer>

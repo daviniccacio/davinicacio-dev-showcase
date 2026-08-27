@@ -10,9 +10,7 @@ const projects = [
     description:
       "App desktop de produtividade baseado na técnica Pomodoro, com timers configuráveis e interface minimalista.",
     tags: ["Electron", "JavaScript", "Tailwind CSS"],
-    links: [
-      { label: "Código", href: "https://github.com/daviniccacio/PomodoroApp", icon: Github },
-    ],
+    links: [{ label: "Código", href: "https://github.com/daviniccacio/PomodoroApp", icon: Github }],
   },
   {
     title: "Horda Crossfit",

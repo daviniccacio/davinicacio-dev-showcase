@@ -47,7 +47,7 @@ export function Nav() {
       {
         rootMargin: "-20% 0px -50% 0px",
         threshold: 0,
-      }
+      },
     );
 
     sectionElements.forEach((el) => observer.observe(el));
