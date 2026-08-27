@@ -37,7 +37,7 @@ export function Timeline() {
     <section id="experiencia" className="mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32">
       <div data-reveal className="reveal">
         <SectionLabel>Experiência</SectionLabel>
-        <h2 className="max-w-lg text-4xl font-bold sm:text-5xl">Onde eu já coloquei a mão.</h2>
+        <h2 className="max-w-lg text-4xl font-bold sm:text-5xl">Onde eu já tive colaboração.</h2>
       </div>
 
       <ol className="mt-16 border-l border-border">
