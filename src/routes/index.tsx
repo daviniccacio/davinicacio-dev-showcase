@@ -6,6 +6,7 @@ import { Timeline } from "@/components/portfolio/Timeline";
 import { Projects } from "@/components/portfolio/Projects";
 import { Contact } from "@/components/portfolio/Contact";
 import { useReveal } from "@/hooks/use-reveal";
+import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 
 const title = "Davi Nicacio — Front-End Developer";
 const description =
@@ -27,6 +28,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   useReveal();
+  useSmoothScroll();
 
   return (
     <main>
