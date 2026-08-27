@@ -1,6 +1,6 @@
 import { ArrowUpRight, Github, Plus } from "lucide-react";
-import pomodoroImg from "@/assets/pomodoro.jpg";
-import hordaImg from "@/assets/horda.jpg";
+import pomodoroImg from "@/assets/pomodoroapp.png";
+import hordaImg from "@/assets/sitehordacross.png";
 import { SectionLabel } from "./About";
 
 const projects = [
@@ -40,7 +40,7 @@ export function Projects() {
             className="reveal group flex flex-col overflow-hidden rounded-3xl border border-border bg-surface/50 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40"
             style={{ transitionDelay: `${i * 80}ms` }}
           >
-            <div className="overflow-hidden border-b border-border">
+            <div className="overflow-hidden border-b border-border object-contain">
               <img
                 src={p.image}
                 alt={`Prévia do projeto ${p.title}`}
