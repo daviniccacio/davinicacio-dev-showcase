@@ -1,7 +1,8 @@
 import { ArrowDown, Github, Instagram, Linkedin } from "lucide-react";
 import { useTypewriter } from "@/hooks/use-reveal";
+import { TextScramble } from "../ui/text-scramble";
 
-export const socials = [
+const socials = [
   { href: "https://github.com/daviniccacio", label: "GitHub", Icon: Github },
   { href: "https://www.linkedin.com/in/daviniccacio", label: "LinkedIn", Icon: Linkedin },
   { href: "https://www.instagram.com/daviniccacio", label: "Instagram", Icon: Instagram },
@@ -21,17 +22,22 @@ export function Hero() {
           São Luís, Maranhão — Brasil
         </p>
 
+        {/* Efeito Scramble no nome principal */}
         <h1
           data-reveal
           className="reveal text-glow text-[clamp(3rem,13vw,10rem)] leading-[0.86] font-bold"
         >
-          Davi
+          <TextScramble text="Davi" />
           <br />
-          Nicacio
+          <TextScramble text="Nicacio" />
         </h1>
 
         <div data-reveal className="reveal mt-8 flex flex-col gap-2">
-          <p className="font-display text-xl font-medium sm:text-2xl">Front-End Developer</p>
+          {/* Efeito Scramble também no título profissional */}
+          <p className="font-display text-xl font-medium sm:text-2xl">
+            <TextScramble text="Front-End Developer" />
+          </p>
+
           <p className="font-mono text-base text-accent sm:text-lg">
             {typed}
             <span className="ml-0.5 inline-block h-[1.1em] w-0.5 translate-y-0.5 bg-accent align-middle animate-terminal-blink" />
