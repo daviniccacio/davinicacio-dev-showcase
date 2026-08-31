@@ -1,6 +1,8 @@
 import { ArrowUpRight, Github, Plus } from "lucide-react";
 import pomodoroImg from "@/assets/pomodoroapp.png";
 import hordaImg from "@/assets/sitehordacross.png";
+import monetiImg from "@/assets/sitemoneti.png"
+import treinopesadoAppImg from "@/assets/apptreinopesado.png"
 import { SectionLabel } from "./About";
 
 const projects = [
@@ -10,7 +12,7 @@ const projects = [
     description:
       "App desktop de produtividade baseado na técnica Pomodoro, com timers configuráveis e interface minimalista.",
     tags: ["Electron", "JavaScript", "Tailwind CSS"],
-    links: [{ label: "Código", href: "https://github.com/daviniccacio/PomodoroApp", icon: Github }],
+    links: [{ label: "Ver Projeto", href: "https://github.com/daviniccacio/PomodoroApp", icon: Github }],
   },
   {
     title: "Horda Crossfit",
@@ -20,6 +22,26 @@ const projects = [
     tags: ["HTML5", "Tailwind CSS", "JavaScript"],
     links: [
       { label: "Ver site", href: "https://horda-cross-website.vercel.app", icon: ArrowUpRight },
+    ],
+  },
+  {
+    title: "Moneti",
+    image: monetiImg,
+    description:
+      "Um sistema web completo, moderno e responsivo para controle e planejamento financeiro pessoal ou empresarial.",
+    tags: ["React", "Tailwind CSS", "Vite"],
+    links: [
+      { label: "Ver Projeto", href: "https://github.com/daviniccacio/FinancePlus", icon: Github },
+    ],
+  },
+  {
+    title: "Treino Pesado App",
+    image: treinopesadoAppImg,
+    description:
+      "Aplicativo Mobile com intuito de visualização e demonstração de exercícios físicos e também criação de treinos para alunos.",
+    tags: ["React Native", "Nativewind", "TypeScript"],
+    links: [
+      { label: "Ver Projeto", href: "https://github.com/daviniccacio/TreinoPesadoApp", icon: Github },
     ],
   },
 ];
@@ -80,23 +102,6 @@ export function Projects() {
             </div>
           </article>
         ))}
-
-        <article
-          data-reveal
-          className="reveal flex min-h-80 flex-col items-center justify-center gap-4 rounded-3xl border border-dashed border-border p-8 text-center transition-colors hover:border-accent/40"
-          style={{ transitionDelay: "160ms" }}
-        >
-          <span className="rounded-full border border-border p-3 text-accent">
-            <Plus className="size-5" />
-          </span>
-          <h3 className="font-display text-lg font-semibold">Próximo projeto</h3>
-          <p className="max-w-[22ch] text-sm text-muted-foreground">
-            Em construção: um app multiplataforma com Tauri e React Native.
-          </p>
-          <span className="font-mono text-[11px] tracking-widest text-muted-foreground uppercase">
-            em breve
-          </span>
-        </article>
       </div>
     </section>
   );
