@@ -7,7 +7,7 @@ export default defineConfig({
   nitro: {
     preset: "github-pages",
     prerender: {
-      routes: ["/"], // A raiz real da aplicação que o Nitro vai compilar
+      routes: ["/davinicacio-dev-showcase/"], // A raiz real da aplicação que o Nitro vai compilar
       crawlLinks: true,
     },
   } as any,
