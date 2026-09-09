@@ -1,4 +1,5 @@
 import { Github, Linkedin, Mail, MessageCircle } from "lucide-react";
+import { useTypewriter } from "@/hooks/use-reveal";
 
 const actions = [
   { label: "WhatsApp", href: "https://wa.me/5598985597868", Icon: MessageCircle, primary: true },
@@ -8,6 +9,8 @@ const actions = [
 ];
 
 export function Contact() {
+  const typed = useTypewriter(["?", "!"]);
+
   return (
     <section
       id="contato"
@@ -19,7 +22,7 @@ export function Contact() {
           <h2 className="text-glow text-[clamp(2.5rem,9vw,6rem)] leading-[0.9] font-bold">
             Vamos
             <br />
-            conversar?
+            conversar{typed}
           </h2>
           <p className="mt-6 max-w-md text-muted-foreground">
             Aberto a oportunidades e freelas de front-end. Escolha o canal que preferir — respondo
