@@ -32,17 +32,13 @@ jobs:
       - name: Build
         run: bun run build
 
-      # Copia o index.html para 404.html para evitar erros ao recarregar rotas
-      - name: Create 404 fallback
-        run: cp dist/index.html dist/404.html
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: './.output/public'
 
       - name: Deploy to GitHub Pages
         id: deployment
