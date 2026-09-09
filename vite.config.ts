@@ -1,20 +1,18 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
-  base: "/davinicacio-dev-showcase/",
   tanstackStart: {
     server: { entry: "src/server.ts" },
   },
   nitro: {
     preset: "github-pages",
-    // O segredo está aqui: o servidor simulará a subpasta corretamente
-    baseURL: "/davinicacio-dev-showcase/",
     prerender: {
-      routes: ["/davinicacio-dev-showcase/"],
+      routes: ["/"], // A raiz real da aplicação que o Nitro vai compilar
       crawlLinks: true,
     },
   } as any,
   vite: {
+    base: "/davinicacio-dev-showcase/", // Isso diz ao Vite para prefixar os assets com a subpasta
     build: {
       ssr: "src/server.ts",
     },

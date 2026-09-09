@@ -10,8 +10,7 @@ export const getRouter = () => {
     context: { queryClient },
     scrollRestoration: true,
     defaultPreloadStaleTime: 0,
-    // Caminho hardcoded para o SSR não se perder:
-    basepath: '/davinicacio-dev-showcase/',
+    basepath: import.meta.env.BASE_URL,
   });
 
   return router;
